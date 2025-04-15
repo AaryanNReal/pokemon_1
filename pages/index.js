@@ -53,7 +53,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold mb-8 text-blue-900">🔍 Pokédex Search</h1>
 
       <div className="relative w-full max-w-md">
-        <div className="flex gap-2 mb-2">
+        <div className="flex gap-2 text-black mb-2">
           <input
             type="text"
             placeholder="Start typing a Pokémon name..."
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         {suggestions.length > 0 && (
-          <ul className="absolute bg-white shadow-lg rounded-md w-full z-10 max-h-40 overflow-auto">
+          <ul className="absolute bg-white shadow-lg rounded-md w-full z-10 text-black max-h-40 overflow-auto">
             {suggestions.map((name, idx) => (
               <li
                 key={idx}
@@ -114,7 +114,7 @@ export default function Home() {
             <h3 className="font-semibold text-lg text-gray-700 mb-2">Base Stats</h3>
             <div className="grid grid-cols-2 gap-2 text-sm text-left">
               {pokemon.stats.map((stat, idx) => (
-                <div key={idx} className="flex justify-between">
+                <div key={idx} className="flex text-black justify-between">
                   <span className="capitalize">{stat.stat.name}</span>
                   <span className="font-semibold">{stat.base_stat}</span>
                 </div>
